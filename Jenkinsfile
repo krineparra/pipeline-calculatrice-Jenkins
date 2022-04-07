@@ -27,7 +27,7 @@ pipeline {
                 }
             }
         }
-	stage('Deliver') {
+	    stage('Deliver') {
             agent any
             environment {
                 VOLUME = '$(pwd)/sources:/src'
@@ -45,6 +45,11 @@ pipeline {
                 }
             }
         }
-
+        stage('Branch') {
+            agent any
+            steps {
+                echo 'nom-de-la-branche'
+            }
+        }
     }
 }
