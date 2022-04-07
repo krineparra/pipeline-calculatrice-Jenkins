@@ -20,6 +20,7 @@ pipeline {
             }
             steps {
                 sh 'pytest -v --junit-xml test-reports/results.xml sources/test_calc.py'
+		echo 'Test pour ajout de WEBHOOK !'
             }
             post {
                 always {
